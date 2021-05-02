@@ -1,0 +1,22 @@
+c'est les pages qui fetch pas les composants
+on peut fetch à n'importe quel moment
+
+faire requete avec verbe de son choix et données de son choix
+récupérer tous les posts (exemple de requete de GET)
+ 
+mounted: async function (){
+// option de la reuqete
+const option = {
+	methode: "GET" // le verbe
+};
+
+// ici le requete
+try{
+	const reponse = await fetch ("adresse sur laquelle il faut effectuer la requête", ici on appelle nos options)
+	console.log (reponse);
+}catch (error){
+	console.log(error);
+	alerte ('erreur s'est produite);
+}
+
+*** headers préciser qu'il faut que le format soit dujson sinon la requête ne peut pas lire les réponses

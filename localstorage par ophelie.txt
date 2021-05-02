@@ -1,0 +1,26 @@
+//On peut seulement stocker des chaines de caractère
+//Si on veut stckoer un tableau ou un objet il faut le convertir en chaine de caractère
+//Dans ce cas on utilise du JSON
+//https://www.alsacreations.com/article/lire/1402-web-storage-localstorage-sessionstorage.html
+
+let monobjet = {
+  name: "Saget",
+  firstname: "Ophélie",
+  age: "25 ans",
+  adresse: "Saint-Laurent-du-Var",
+};
+
+
+//Transformation en JSON
+var monobjet_json = JSON.stringify(monobjet);
+//Stockage de l'objet en JSON
+localStorage.setItem("objet", monobjet_json);
+//Récupération de l'élément stocké
+var monobjet_json = localStorage.getItem("objet");
+//Transfo du JSON en objet
+var monobjet = JSON.parse(monobjet_json);
+// Affichage dans la console
+console.log(monobjet);
+
+//Pour effacer tout les éléments du localStorage
+localStorage.clear();
